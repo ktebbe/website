@@ -196,7 +196,7 @@
 						            {name: 'Styled Map'});
 							        
 							        var map = new google.maps.Map(document.getElementById('map'), {
-							          zoom: 4,
+							          zoom: 2,
 							          center: {lat: 0, lng: -180},
 							          mapTypeControlOptions: {
            								 mapTypeIds: ['roadmap', 'satellite', 'hybrid', 'terrain',
@@ -210,14 +210,12 @@
         							map.setMapTypeId('styled_map');
 
 
-
-									  var ctaLayer = new google.maps.KmlLayer({
-									    url: 'https://sites.google.com/site/905robert/Home/countries_world.kml',
-									    map: map
-									  	});
+        							// taken from https://codepen.io/bachly/pen/BNQQey
+									  // var ctaLayer = new google.maps.KmlLayer({
+									  //   url: 'https://sites.google.com/site/905robert/Home/countries_world.kml',
+									  //   map: map
+									  // 	});
 									  	
-
-
         							// --------------------
 
 							        // These make & draw the different markers
@@ -230,10 +228,19 @@
 
 							      	// This plots the path across the ocean
 								    var flightPlanCoordinates = [
-								          {lat: 37.772, lng: -122.214},
-								          {lat: 21.291, lng: -157.821},
-								          {lat: -18.142, lng: 178.431},
-								          {lat: -27.467, lng: 153.027}
+								    	  {lat: 44.376318, lng: -64.317321}, // Canada
+								    	  {lat: 32.292118, lng: -64.779753}, // Bermuda
+								    	  {lat: 16.234904, lng: -61.537412}, // Guadeloupe
+								    	  {lat: 15.312233, lng: -61.388174}, // Dominica
+								    	  {lat: 11.181557, lng: -60.735620}, // Tobago
+								    	  {lat: 10.656292, lng: -61.526075}, // Trinidad 
+								    	  {lat: 13.096971, lng: -59.620683}, // Barbados
+								    	  {lat: -7.925761, lng: -14.411424}, // Ascension
+								          {lat: -15.927554, lng: -5.716261}, // St. Helena
+								          {lat: -22.938660, lng: 14.524052}, //Namibia
+								          {lat: -33.923766, lng: 18.418104}, //Cape Town
+								          {lat: -40.316841, lng: -9.935793}, //Gough
+								          {lat: -22.907428, lng: -43.176998} //Rio
 								        ];
 								    var flightPath = new google.maps.Polyline({
 								          path: flightPlanCoordinates,
