@@ -1,0 +1,137 @@
+<!DOCTYPE HTML>
+<!--
+	This shows an interactive map.
+-->
+<html>
+	<head>
+		<title>KT | Map</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+	</head>
+	<body class="no-sidebar">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<div id="header">
+
+					<!-- Inner -->
+						<div class="inner">
+							<header>
+								<h1><a href="index.html" id="logo">Where I've Lived</a></h1>
+							</header>
+						</div>
+
+					<!-- Nav -->
+						<nav id="nav">
+							<ul>
+								<li><a href="index.html">Home</a></li>
+								<li>
+									<a href="#">Projects</a>
+									<ul>
+										<li>
+											<a href="#">Quantitative &rarr;</a>
+											<ul>
+												<li><a href="math-thesis.html">Thesis for Applied Math BA</a></li>
+												<li><a href="nba.html">NBA Hackathon</a></li>
+												<li><a href="#">RDS Analysis Tool</a></li>
+											</ul>
+										</li>
+										<li>
+											<a href="#">Qualitative &rarr;</a>
+											<ul>
+												<li><a href="socy-thesis.html">Thesis for Sociology BA</a></li>
+												<li><a href="schedule.html">Schedule Redesign</a></li>
+											</ul>
+										</li>
+										<li><a href="#">Veroeros feugiat</a></li>
+									</ul>
+								</li>
+								<li><a href="left-sidebar.html">Left Sidebar</a></li>
+								<li><a href="right-sidebar.html">Right Sidebar</a></li>
+								<li><a href="no-sidebar.html">No Sidebar</a></li>
+							</ul>
+						</nav>
+
+				</div>
+
+			<!-- Main -->
+				<div class="wrapper style1">
+
+					<div class="container">
+						<article id="main" class="special">
+							<header>
+								<p>
+									Click on the markers to see why I was there!
+								</p>
+							</header>
+								<style>
+								      #map {
+								        width: 100%;
+								        height: 700px;
+								        background-color: grey;
+								      }
+								</style>
+								<div id="map"></div>
+								<!-- Code taken from https://developers.google.com/maps/documentation/javascript/adding-a-google-map -->
+								<script>
+							      function initMap() {
+							        var uluru = {lat: -25.363, lng: 131.044};
+							        var map = new google.maps.Map(document.getElementById('map'), {
+							          zoom: 4,
+							          center: {lat: 0, lng: -180},
+							          mapTypeId: 'terrain'
+
+							        });
+							        var marker = new google.maps.Marker({
+							          position: uluru,
+							          map: map
+							        });
+							      
+								    var flightPlanCoordinates = [
+								          {lat: 37.772, lng: -122.214},
+								          {lat: 21.291, lng: -157.821},
+								          {lat: -18.142, lng: 178.431},
+								          {lat: -27.467, lng: 153.027}
+								        ];
+								    var flightPath = new google.maps.Polyline({
+								          path: flightPlanCoordinates,
+								          geodesic: true,
+								          strokeColor: '#FF0000',
+								          strokeOpacity: 1.0,
+								          strokeWeight: 2
+								        });
+
+								    flightPath.setMap(map);
+							    }
+
+
+							    </script>
+
+							    <script async defer src="https://maps.googleapis.com/maps/api/js?key= AIzaSyBaVDwOn-MJcfTa7Lx-EniCBow0s9W5EYo&callback=initMap">
+							    </script>
+								<!-- copied code ends here -->
+
+						</article>
+					</div>
+
+				</div>
+
+			<!-- Footer -->
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.onvisible.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
