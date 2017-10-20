@@ -106,7 +106,7 @@
 						              {
 						                featureType: 'landscape.natural',
 						                elementType: 'geometry',
-						                stylers: [{color: '#F1D4AF'}] //used to be #dfd2ae
+						                stylers: [{color: '#e9e5da'}] //used to be e9e1da F1D4AF or #FEDCD2
 						              },
 						              {
 						                featureType: 'poi',
@@ -186,12 +186,12 @@
 						              {
 						                featureType: 'water',
 						                elementType: 'geometry.fill',
-						                stylers: [{color: '#bcdbdb'}] //used to be #C5E0DC
+						                stylers: [{color: '#8EAEBD'}] //used #88BBD6 #C5E0DC #bcdbdb #BFD8D2
 						              },
 						              {
 						                featureType: 'water',
 						                elementType: 'labels.text.fill',
-						                stylers: [{color: '#92998d'}] //unchanged
+						                stylers: [{color: '#5e635b'}] //used to be #92998d
 						              }
 						            ],
 						            {name: 'Styled Map'});
@@ -236,14 +236,15 @@
 							          position: {lat: 41.898812, lng: -87.940086},
 							          map: map,
 							          title: 'Elmhurst, IL',
-							          animation: google.maps.Animation.DROP,
-							          icon : 'images/marker2.png'
+							          icon : 'images/marker2.png',
+							          animation: google.maps.Animation.DROP
 							        });
 
 							        var newhaven = new google.maps.Marker({
 							        	position: {lat: 41.310050, lng: -72.932111},  
 							        	map: map,
 							        	title: 'New Haven, CT',
+							        	icon : 'images/marker2.png',
 							        	animation: google.maps.Animation.DROP
 							        });
 
@@ -251,6 +252,7 @@
 							        	position: {lat: 45.680393, lng: 13.378309},  
 							        	map: map,
 							        	title: 'Grado, Italy',
+							        	icon : 'images/marker2.png',
 							        	animation: google.maps.Animation.DROP
 							        });
 
@@ -258,6 +260,7 @@
 							        	position: {lat: 25.049005, lng: 102.704181},  
 							        	map: map,
 							        	title: 'Kunming, China',
+							        	icon : 'images/marker2.png',
 							        	animation: google.maps.Animation.DROP
 							        });
 
@@ -265,6 +268,7 @@
 							        	position: {lat: -30.978925, lng: -64.424544},  
 							        	map: map,
 							        	title: 'La Cumbre, Argentina',
+							        	icon : 'images/marker2.png',
 							        	animation: google.maps.Animation.DROP
 							        });
 
@@ -272,6 +276,7 @@
 							        	position: {lat: -27.476603, lng: -58.986513},  
 							        	map: map,
 							        	title: 'Resistencia, Argentina',
+							        	icon : 'images/marker2.png',
 							        	animation: google.maps.Animation.DROP
 							        });
 
@@ -279,6 +284,7 @@
 							        	position: {lat: 40.965146, lng: -5.664007},  
 							        	map: map,
 							        	title: 'Salamanca, Spain',
+							        	icon : 'images/marker2.png',
 							        	animation: google.maps.Animation.DROP
 							        });
 
@@ -361,11 +367,38 @@
 								    var flightPath = new google.maps.Polyline({
 								          path: flightPlanCoordinates,
 								          geodesic: true,
-								          strokeColor: '#E08E79', // or #E48786
+								          strokeColor: '#353A85', // or #E08E79 #E06488
 								          strokeOpacity: 1.0,
 								          strokeWeight: 2
 								        });
 								    flightPath.setMap(map);
+
+								    // making a ship marker 
+								    var ship = new google.maps.Marker({
+							        	position: {lat: -7.925761, lng: -14.411424},  
+							        	map: map,
+							        	title: 'Atlantic Ocean',
+							        	icon : 'images/ship1.png',
+							        	animation: google.maps.Animation.DROP
+							        });
+
+								    // flightPath.addListener(flightPath, 'click', function(h) {
+								    // 	//var latlng=h.latLng;
+								    // 	//var latitude = h.latLng.lat();
+    								// 	//var longitude = h.latLng.lng();
+							     //    	gradoInfo.open(map, h.latLng);
+							     //    });
+							     	var shipInfo = new google.maps.InfoWindow({
+							        		content: ["hello"]
+							        	});
+
+							     	google.maps.event.addListener(flightPath, 'click', function(h) {
+									    //alert('you clicked polyline');
+									    var posit = h.latLng;
+									    alert(posit + shipInfo);
+									    shipInfo.open(map, position = posit);
+									    });
+
 								    // -------------------------
 
 							    }
