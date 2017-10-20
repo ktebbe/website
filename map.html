@@ -198,10 +198,9 @@
 							        
 							        var map = new google.maps.Map(document.getElementById('map'), {
 							          zoom: 2,
-							          center: {lat: 0, lng: -180},
+							          center: {lat: -7.925761, lng: -15.411424},
 							          mapTypeControlOptions: {
-           								 mapTypeIds: ['roadmap', 'satellite', 'hybrid', 'terrain',
-                    						'styled_map']
+           								 mapTypeIds: ['roadmap','terrain','styled_map']
           								}
 
 							        });
@@ -218,8 +217,6 @@
 									  // 	});
 									  	
         							// --------------------
-
-							        // These make & draw the different markers
 
 							        // dropping function
 							        // see here: https://developers.google.com/maps/documentation/javascript/examples/marker-animations-iteration
@@ -272,7 +269,7 @@
 							        	animation: google.maps.Animation.DROP
 							        });
 
-							        var resis = new google.maps.Marker({
+							        var resistencia = new google.maps.Marker({
 							        	position: {lat: -27.476603, lng: -58.986513},  
 							        	map: map,
 							        	title: 'Resistencia, Argentina',
@@ -285,6 +282,15 @@
 							        	map: map,
 							        	title: 'Salamanca, Spain',
 							        	icon : 'images/marker2.png',
+							        	animation: google.maps.Animation.DROP
+							        });
+
+							        // making a ship marker 
+								    var ship = new google.maps.Marker({
+							        	position: {lat: -7.925761, lng: -15.411424},  
+							        	map: map,
+							        	title: 'Atlantic Ocean',
+							        	icon : 'images/ship2.png',
 							        	animation: google.maps.Animation.DROP
 							        });
 
@@ -312,6 +318,15 @@
 							        '</div>'+
 							        '</div>';
 
+							        var chinaContent = '<div id="content">'+
+							        '<div id="siteNotice">'+
+							        '</div>'+
+							        '<h1 id="firstHeading" class="firstHeading">Kunming, China | 3 months | September 2013 – December 2013</h1>'+
+							        '<div id="bodyContent">'+
+							        '<p> This trip kicked off my gap year between high school and college. I went on a program called Where There Be Dragons with seven other students. Because of medical issues at the beginning of the trip, I spent most of my time in Kunming while the rest of the group spent the first month in the western mountains. While I was in Kunming, most of my days consisted of a language class, a cooking or calligraphy class, and lots of meandering around the lake in the center of the city. Some of my favorite parts of my time there were street food for breakfast, reading in the park, eating my host mother’s food, and speaking Chinese.</p>'+
+							        '</div>'+
+							        '</div>';
+
 							        var gradoContent = '<div id="content">'+
 							        '<div id="siteNotice">'+
 							        '</div>'+
@@ -320,6 +335,45 @@
 							        '<p>Hands down, best summer of my life. I had an incredible time in Grado. The schedule could not have been better: three hours of class in the morning, lunch (and you know it was delicious), homework at the beach, and then dinner (also delicious) practicing Italian with my wonderful host family. My host family was extremely supportive of me learning Italian. On the drive from the airport when they picked me up, I only knew basic nouns. After it got uncomfortably silent (because neither of us knew the other’s language), I started to point at things out the window and naming them in Italian, like ‘tree’ or ‘man.’ They caught on and started teaching me new words like ‘ocean’ and ‘car.’ Another time, I was expressing my confusion over the pronunciation of some letters and asked if they could help. From the back of a closet they produced some children’s books with an accompanying cassette. For the next few days, I listened and read along to children’s fables in Italian. Eventually, given their immense support, I could have full conversations with them, which was more entertaining than just saying nouns. </p>'+
 							        '<p>I also made some great friends on the trip & we went on class-sponsored ‘education trips’ to different places around Italy. One weekend, we went to Austria and stumbled upon the Austria IronMan competition. I also became good friends with a woman who worked at my favorite ice cream shop. One of our first school assignments (let me remind you, I received Yale credit for this) was to approach a stranger and ask them their name and birthday, as that was what we had learned on our first day. Our friendship grew from there. I had a scoop of ‘foresta nera’ (‘black forest’ – chocolate ice cream with chunks of chocolate chunks and Maraschino cherries) basically daily. </p>'+
 							        '<p>Overall, incredible time. I was happy, ate great food, enjoyed great company, and learned a new language – what more could you want!</p>'+
+							        '</div>'+
+							        '</div>';
+
+							        var cumbreContent = '<div id="content">'+
+							        '<div id="siteNotice">'+
+							        '</div>'+
+							        '<h1 id="firstHeading" class="firstHeading">La Cumbre, Argentina | 1 month | June 2013</h1>'+
+							        '<div id="bodyContent">'+
+							        '<p>As a kid, I thought that working with monkeys would be cool, so when I decided I would take a gap year, I started looking for monkey-oriented volunteering programs – and found one! Two hours away from Córdoba, up in the mountains, lies <a href = https://caraya.org/>Argentina’s only monkey rehabilitation center</a>. The center’s primary purpose is to take in abandoned or domesticated monkeys and teach them how to survive in the wild, with the eventual goal of releasing them to a forest in Uruguay. </p>'+
+							        '<p>During my time there, I led tours to local Argentinians, cleaned plates of food (for the monkeys, not the people), gave water to all of the animals (including llamas, pumas, & dogs), and cleaned & help build cages, and give bananas to monkeys – they don’t eat them like you would think!</p>'+
+							        '</div>'+
+							        '</div>';
+
+							        var salamancaContent = '<div id="content">'+
+							        '<div id="siteNotice">'+
+							        '</div>'+
+							        '<h1 id="firstHeading" class="firstHeading">Salamanca & San Sebastian, Spain | 1 Month | July 2009</h1>'+
+							        '<div id="bodyContent">'+
+							        '<p>This was my first time I travelled alone – and it was to another continent! I was 15 at the time and went to Spain for language classes in Salamanca and a week with a host family in San Sebastian. This was also my first time doing immersion language classes, which you can tell I loved because of how many other later times I went abroad to learn a language. And while I was only with my host family for a week, I learned a lot and enjoyed the experience. I even got to experience Spain’s healthcare system when I got sick halfway through!</p>'+
+							        '</div>'+
+							        '</div>';
+
+							        var shipContent = '<div id="content">'+
+							        '<div id="siteNotice">'+
+							        '</div>'+
+							        '<h1 id="firstHeading" class="firstHeading">Sorlandet & Atlantic Ocean | 18 weeks | January 2014 – June 2014</h1>'+
+							        '<div id="bodyContent">'+
+							        '<p>Three weeks before I flew to Rio de Janeiro, I decided I wanted to spend the spring of my gap year on a ship. I joined the students & crew of <b>Sørlandet</b>, a 210-foot long Norwegian tall ship and the oldest full-rigged ship still in operation, through the program <b>Class Afloat</b>, an international education program geared towards high school and gap year students. We travelled across the Atlantic Ocean (twice) to visit 12 countries/cities: Brazil, Gough Island, South Africa, Namibia, St. Helena, Ascension Island, Barbados, Trinidad & Tobago, Dominica, Guadeloupe, Bermuda, and Canada. </p>'+
+							        '<p>Living on a ship was completely new. While we were at sea, I would work for 7 hours and be in class for 2. The hardest part to get used to, besides acquiring sea legs, was night watch. Two of those 7 work hours would be between 8pm and 8am. For example, if your watch (team) were scheduled on the 2-4 night watch, you would fall asleep at 10pm, wake up at 1:45an, be on watch from 2am-4am, be back in bed at 4:10am, and wake up again at 7am for breakfast. Everyone on board, myself included, got very good at falling asleep quickly. One of my good friends boasted that she could nap for five minutes: one to fall asleep, three asleep, and one to wake up. </p>'+
+							        '<p>Yet however odd the schedules or on-board rules were, I saw things I would never see otherwise. The stars in the middle of the ocean are so clear that you can see a band of the galaxy. There were bioluminescent plankton that would light up in the ship’s wake. The sky and its sunsets look much bigger when there’s only water around you. I’m grateful not only for these experiences, but also getting to know 50 other travel-hungry people my age, many of whom I’ve met up with in other parts of the world since the program ended. </p>'+
+							        '</div>'+
+							        '</div>';
+
+							        var resistenciaContent = '<div id="content">'+
+							        '<div id="siteNotice">'+
+							        '</div>'+
+							        '<h1 id="firstHeading" class="firstHeading">Resistencia, Argentina | 1 month | June 2010</h1>'+
+							        '<div id="bodyContent">'+
+							        '<p>This program was similar to my experience in Spain, except I stayed with a wonderful host family for the entire month instead of just one week. I really got along with the entire family and liked helping with their English school that they ran out of a room attached to their house. While I was there, I attended a quinceañera, went to the Iguazu falls with my (real) dad, and ate lots of dulce de leche.</p>'+
 							        '</div>'+
 							        '</div>';
 
@@ -337,12 +391,47 @@
 							        elmhurst.addListener('click', function() {
 							        	elmhurstInfo.open(map, elmhurst);
 							        });
+
+							        var chinaInfo = new google.maps.InfoWindow({
+							        	content: chinaContent
+							        });
+							        china.addListener('click', function() {
+							        	chinaInfo.open(map, china);
+							        });
 							        
 							        var gradoInfo = new google.maps.InfoWindow({
 							        	content: gradoContent
 							        });
 							        grado.addListener('click', function() {
 							        	gradoInfo.open(map, grado);
+							        });
+
+							        var shipInfo = new google.maps.InfoWindow({
+							        	content: shipContent
+							        });
+							        ship.addListener('click', function() {
+							        	shipInfo.open(map, ship);
+							        });
+
+							        var cumbreInfo = new google.maps.InfoWindow({
+							        	content: cumbreContent
+							        });
+							        cumbre.addListener('click', function() {
+							        	cumbreInfo.open(map, cumbre);
+							        });
+
+							        var salamancaInfo = new google.maps.InfoWindow({
+							        	content: salamancaContent
+							        });
+							        salamanca.addListener('click', function() {
+							        	salamancaInfo.open(map, salamanca);
+							        });
+
+							        var resistenciaInfo = new google.maps.InfoWindow({
+							        	content: resistenciaContent
+							        });
+							        resistencia.addListener('click', function() {
+							        	resistenciaInfo.open(map, resistencia);
 							        });
 
 
@@ -359,10 +448,10 @@
 								    	  {lat: 13.096971, lng: -59.620683}, // Barbados
 								    	  {lat: -7.925761, lng: -14.411424}, // Ascension
 								          {lat: -15.927554, lng: -5.716261}, // St. Helena
-								          {lat: -22.938660, lng: 14.524052}, //Namibia
-								          {lat: -33.923766, lng: 18.418104}, //Cape Town
-								          {lat: -40.316841, lng: -9.935793}, //Gough
-								          {lat: -22.907428, lng: -43.176998} //Rio
+								          {lat: -22.938660, lng: 14.524052}, // Namibia
+								          {lat: -33.923766, lng: 18.418104}, // Cape Town
+								          {lat: -40.316841, lng: -9.935793}, // Gough
+								          {lat: -22.907428, lng: -43.176998} // Rio
 								        ];
 								    var flightPath = new google.maps.Polyline({
 								          path: flightPlanCoordinates,
@@ -373,14 +462,7 @@
 								        });
 								    flightPath.setMap(map);
 
-								    // making a ship marker 
-								    var ship = new google.maps.Marker({
-							        	position: {lat: -7.925761, lng: -14.411424},  
-							        	map: map,
-							        	title: 'Atlantic Ocean',
-							        	icon : 'images/ship1.png',
-							        	animation: google.maps.Animation.DROP
-							        });
+								    
 
 								    // flightPath.addListener(flightPath, 'click', function(h) {
 								    // 	//var latlng=h.latLng;
@@ -388,16 +470,13 @@
     								// 	//var longitude = h.latLng.lng();
 							     //    	gradoInfo.open(map, h.latLng);
 							     //    });
-							     	var shipInfo = new google.maps.InfoWindow({
-							        		content: ["hello"]
-							        	});
 
-							     	google.maps.event.addListener(flightPath, 'click', function(h) {
-									    //alert('you clicked polyline');
-									    var posit = h.latLng;
-									    alert(posit + shipInfo);
-									    shipInfo.open(map, position = posit);
-									    });
+							     	// google.maps.event.addListener(flightPath, 'click', function(h) {
+									    // //alert('you clicked polyline');
+									    // var posit = h.latLng;
+									    // alert(posit + shipInfo);
+									    // shipInfo.open(map, position = posit);
+									    // });
 
 								    // -------------------------
 
