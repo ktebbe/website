@@ -1,0 +1,135 @@
+<!DOCTYPE HTML>
+<!--
+	This page documents the Shiny app I made in the summer of 2015. 
+-->
+<html>
+	<head>
+		<title>KT | RDS</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<script src="https://code.jquery.com/jquery-1.10.2.js"></script> 
+	</head>
+	<body class="left-sidebar">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<div id="header">
+
+					<!-- Inner -->
+						<div class="inner">
+							<header>
+								<h1><a href="index.html" id="logo">RDS Analysis Tool</a></h1>
+							</header>
+						</div>
+
+					<!-- Nav -->
+					<nav id="nav">
+						<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+						<script>
+						$(function(){
+						  $("#nav").load("nav.html");
+						});
+						</script> 
+					</nav>
+
+				</div>
+
+			<!-- Main -->
+				<div class="wrapper style1">
+
+					<div class="container">
+						<div class="row 200%">
+							<div class="4u 12u(mobile)" id="sidebar">
+								<hr class="first" />
+								<section>
+									<header>
+										<h3><a>Want to see more?</a></h3>
+									</header>
+									<footer>
+										<a href="https://ktebbe.shinyapps.io/rds_shiny/" class="button">Go to Application (beta)</a>
+										<p></p>
+										<a href="#" class="button">Go to Github</a>
+									</footer>
+								</section>
+								<hr />
+							</div>
+							<div class="8u 12u(mobile) important(mobile)" id="content">
+								<article id="main">
+									<a href="#" class="image featured"><img src="images/rds_page.jpg" alt="" /></a>
+									<p>
+										<h3>A free, online tool for sociologists to analyze their own respondent-driven sampling (RDS) data.</h3>
+									</p>
+									<p>
+										Respondent-driven sampling is a sampling technique employed by researchers who seek to recruit hard-to-find or stigmatized populations. RDS works through a dual-incentive system that rewards a participant both for coming in herself and for recruiting another qualified participant who partakes in the study. After identifying some initial members of the target population, the researcher gives each participant a number of coupons with their unique serial number for them to give out to other members of the target population that he or she may know. The unique serial number is used to link recruiter and recruitee to make a network of participants. It is a similar technique to snowball sampling, but differs in the amount of identifying information (e.g. name, contact information) that the participant has to give to the researcher. This is useful in stigmatized populations, such as drug users, who may be hesitant to give up the information of other drug users they may know for fear of that information being given to law enforcement officials. For more information on the details of RDS, <a href = "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3250988/">see here </a>. 
+									</p>
+									<p>
+										Unfortunately, the existing analysis tools for RDS data are hard-to-use and often require the user to install certain software. During the summer of 2014, I created an application with Shiny, R’s web application framework. The application allows the user to upload their own data without any installations, downloads, or knowledge of how to program. Each components, such as mapping or network visualization, is customizable to the users wants and needs.
+										</p>
+								</article>
+							</div>
+						</div>
+						<hr />
+						<header>
+							<h3><center>Features of the Application</center></h3>
+						</header>
+
+						<div class="row">
+							<article class="4u 12u(mobile) special">
+								<a class="image featured"><img src="images/rds_network.jpg" alt="" /></a>
+								<header>
+									<h3>Network</h3>
+								</header>
+								<p>
+									Visualize the network in a variety of layouts algorithms, such as Reingold Tilford (pictured here), Kamada Kawai, and Fruchterman Reingold. Customize the attribute used to color the nodes, the color of the nodes, and a solid or gradient fill for the nodes.
+								</p>
+							</article>
+							<article class="4u 12u(mobile) special">
+								<a class="image featured"><img src="images/rds_geo.jpg" alt="" /></a>
+								<header>
+									<h3>Geography</h3>
+								</header>
+								<p>
+									Conduct spatial analysis through a visualization of the network’s spatial properties. Change the layout of the map, change the attribute used to color or size the nodes, and add or remove recruitment ties. 
+								</p>
+							</article>
+							<article class="4u 12u(mobile) special">
+								<a class="image featured"><img src="images/rds_time.jpg" alt="" /></a>
+								<header>
+									<h3>Time Series</h3>
+								</header>
+								<p>
+									Implement various plotting techniques, such as time series of recruitment and cumulative recruitment, and view summary statistics, such as inter-recruitment waiting time and edgewise recruitment time. 
+								</p>
+							</article>
+						</div>
+					</div>
+
+				</div>
+
+			<!-- Footer -->
+			<div id="footer">
+				<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+				<script> 
+				$(function(){
+				  $("#footer").load("footer.html"); 
+				});
+				</script> 
+			</div>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.onvisible.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
