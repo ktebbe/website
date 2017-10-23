@@ -10,42 +10,25 @@
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<script src="https://code.jquery.com/jquery-1.10.2.js"></script> 
 	</head>
-	<body class="no-sidebar">
-		<div id="page-wrapper">
+	<body class="no-sidebar" style="background-color: rgb(0,0,0);">
+		<div id="page-wrapper" style="background-color: rgb(0,0,0);">
 
 			<!-- Header -->
-				<div id="header">
+			
 
 					<!-- Nav -->
 						<nav id="nav">
-							<ul>
-								<li><a href="index.html">Home</a></li>
-								<li>
-									<a href="#">Dropdown</a>
-									<ul>
-										<li><a href="#">Lorem ipsum dolor</a></li>
-										<li><a href="#">Magna phasellus</a></li>
-										<li><a href="#">Etiam dolore nisl</a></li>
-										<li>
-											<a href="#">And a submenu &hellip;</a>
-											<ul>
-												<li><a href="#">Lorem ipsum dolor</a></li>
-												<li><a href="#">Phasellus consequat</a></li>
-												<li><a href="#">Magna phasellus</a></li>
-												<li><a href="#">Etiam dolore nisl</a></li>
-											</ul>
-										</li>
-										<li><a href="#">Veroeros feugiat</a></li>
-									</ul>
-								</li>
-								<li><a href="left-sidebar.html">Left Sidebar</a></li>
-								<li><a href="right-sidebar.html">Right Sidebar</a></li>
-								<li><a href="no-sidebar.html">No Sidebar</a></li>
-							</ul>
+							<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+							<script>
+							$(function(){
+							  $("#nav").load("nav.html");
+							});
+							</script> 
 						</nav>
 
-				</div>
+			
 
 			<!-- Main -->
 				<div class="wrapper style1" style="background-color: rgb(0,0,0);">
@@ -68,8 +51,6 @@
 					</div>
 
 				</div>
-
-			<!-- Footer -->
 
 		</div>
 
