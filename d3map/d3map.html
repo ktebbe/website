@@ -7,6 +7,7 @@
 <head>
   <meta charset="utf-8">
   <script src="http://d3js.org/d3.v3.min.js"></script>
+
     <style>
 
     path:hover {
@@ -27,7 +28,9 @@
       pointer-events: none;         
     }
 
+
     </style>
+
     <script type="text/javascript">  
       function draw(geo_data) {
         "use strict";
@@ -48,6 +51,10 @@
 
         var path = d3.geo.path().projection(projection);
 
+        var div = d3.select("body").append("div")   
+                    .attr("class", "tooltip")               
+                    .style("opacity", 0);
+
         var map = svg.selectAll('path')
                      .data(geo_data.features)
                      .enter()
@@ -57,10 +64,19 @@
                      .style('stroke', 'black')
                      .style('stroke-width', 0.5)
                      .on("mouseover", function(d) {      
-                          div.transition()  
-                             .duration(200)           
-                             .style("opacity", .1);     
-                      });
+                        div.transition()        
+                            .duration(300)      
+                            .style("opacity", .9);      
+                        div .html('hello')  
+                            .style("left", (d3.event.pageX) + "px")     
+                            .style("top", (d3.event.pageY - 28) + "px");    
+                        })
+                     .on("mouseout", function(d) {       
+                        div.transition()        
+                            .duration(300)      
+                            .style("opacity", 0);   
+                        });
+
       };
       </script>
   </head>
@@ -71,6 +87,7 @@
     */
     
   d3.json("world_countries.json", draw);
+
   </script>
 </body>
 </html>
