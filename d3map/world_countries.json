@@ -36291,7 +36291,7 @@
             "id": "RUS",
             "properties": {
                 "name": "Russia",
-                "descrip": "testing"
+                "descrip": ["2014", "close to North Pole"]
             },
             "type": "Feature"
         },
