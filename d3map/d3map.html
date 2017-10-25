@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<!--
+  This d3 map started with a template from Udacity's D3 course. 
+  Help from: http://www.d3noob.org/2013/01/adding-tooltips-to-d3js-graph.html
+-->
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="http://d3js.org/d3.v3.min.js"></script>
+    <style>
+
+    path:hover {
+      fill-opacity: .5;
+    }
+
+    /* custom tooltip */
+    div.tooltip {   
+      position: absolute;           
+      text-align: center;           
+      width: 60px;                  
+      height: 28px;                 
+      padding: 2px;             
+      font: 12px sans-serif;        
+      background: white;   
+      border: 0px;      
+      border-radius: 8px;           
+      pointer-events: none;         
+    }
+
+    </style>
+    <script type="text/javascript">  
+      function draw(geo_data) {
+        "use strict";
+        var margin = 75,
+            width = 1400 - margin,
+            height = 600 - margin;
+
+        var svg = d3.select("body")
+            .append("svg")
+            .attr("width", width + margin)
+            .attr("height", height + margin)
+            .append('g')
+            .attr('class', 'map');
+
+        var projection = d3.geo.mercator()
+                               .scale(120)
+                               .translate( [width / 2, height / 2]);
+
+        var path = d3.geo.path().projection(projection);
+
+        var map = svg.selectAll('path')
+                     .data(geo_data.features)
+                     .enter()
+                     .append('path')
+                     .attr('d', path)
+                     .style('fill', 'lightBlue')
+                     .style('stroke', 'black')
+                     .style('stroke-width', 0.5)
+                     .on("mouseover", function(d) {      
+                          div.transition()  
+                             .duration(200)           
+                             .style("opacity", .1);     
+                      });
+      };
+      </script>
+  </head>
+<body>
+  <script type="text/javascript">
+  /*
+    Use D3 to load the GeoJSON file
+    */
+    
+  d3.json("world_countries.json", draw);
+  </script>
+</body>
+</html>
