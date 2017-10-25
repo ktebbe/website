@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <!--
   This d3 map started with a template from Udacity's D3 course. 
-  Help from the following: 
+  Help & inspiration from the following: 
     Tooltips: http://www.d3noob.org/2013/01/adding-tooltips-to-d3js-graph.html
     Tooltip moving with mouse: https://bl.ocks.org/mbostock/1087001
+    Reactive coloring: http://bl.ocks.org/michellechandra/0b2ce4923dc9b5809922
 -->
 <html>
 <head>
@@ -62,7 +63,20 @@
                      .enter()
                      .append('path')
                      .attr('d', path)
-                     .style('fill', 'lightBlue')
+                     .style('fill', 'rgb(130,202,250)')
+                     .style("fill", function(d) {
+                        // Get data value
+                        var visited = d.properties.descrip;
+
+                        if (visited !== undefined) {
+                        //If description field exists ... darker color
+                        return "rgb(71, 71, 137)";
+                        } else {
+                        //If description field does not exist ... lighter color
+                        return "rgb(208, 208, 234)";
+                        }
+                      })
+
                      .style('stroke', 'black')
                      .style('stroke-width', 0.5)
                      .on("mouseover", function(d) {      
