@@ -1314,7 +1314,8 @@
             },
             "id": "ARG",
             "properties": {
-                "name": "Argentina"
+                "name": "Argentina",
+                "descrip": ["2013", "eating chipas"]
             },
             "type": "Feature"
         },
@@ -4084,7 +4085,8 @@
             },
             "id": "ATA",
             "properties": {
-                "name": "Antarctica"
+                "name": "Antarctica",
+                "descrip": ["2011", "watching penguins slide down trails on hillsides"]
             },
             "type": "Feature"
         },
@@ -5118,7 +5120,8 @@
             },
             "id": "AUS",
             "properties": {
-                "name": "Australia"
+                "name": "Australia",
+                "descrip": ["2011", "watching fireworks off the Sydney Harbour Bridge"]
             },
             "type": "Feature"
         },
@@ -5280,7 +5283,8 @@
             },
             "id": "AUT",
             "properties": {
-                "name": "Austria"
+                "name": "Austria",
+                "descrip": ["2014", "doing cartwheels on top of a grassy mountain"]
             },
             "type": "Feature"
         },
@@ -5616,7 +5620,8 @@
             },
             "id": "BEL",
             "properties": {
-                "name": "Belgium"
+                "name": "Belgium",
+                "descrip": ["2017", "sandwiches at Tonton Garby"]
             },
             "type": "Feature"
         },
@@ -7758,7 +7763,8 @@
             },
             "id": "BRA",
             "properties": {
-                "name": "Brazil"
+                "name": "Brazil",
+                "descrip": ["2013", "public murals & graffiti"]
             },
             "type": "Feature"
         },
@@ -11618,7 +11624,8 @@
             },
             "id": "CAN",
             "properties": {
-                "name": "Canada"
+                "name": "Canada",
+                "descrip": ["2015", "the sailing culture of Lunenburg NS"]
             },
             "type": "Feature"
         },
@@ -11728,7 +11735,8 @@
             },
             "id": "CHE",
             "properties": {
-                "name": "Switzerland"
+                "name": "Switzerland",
+                "descrip": ["2014", "visiting CERN"]
             },
             "type": "Feature"
         },
@@ -13184,7 +13192,8 @@
             },
             "id": "CHN",
             "properties": {
-                "name": "China"
+                "name": "China",
+                "descrip": ["2012", "street food for breakfast & people in the park"]
             },
             "type": "Feature"
         },
@@ -15412,7 +15421,8 @@
             },
             "id": "CZE",
             "properties": {
-                "name": "Czech Republic"
+                "name": "Czech Republic",
+                "descrip": ["2014", "the Charles Bridge & the nightlife"]
             },
             "type": "Feature"
         },
@@ -15658,7 +15668,8 @@
             },
             "id": "DEU",
             "properties": {
-                "name": "Germany"
+                "name": "Germany",
+                "descrip": ["2014", "the Holocaust Memorial"]
             },
             "type": "Feature"
         },
@@ -15848,7 +15859,8 @@
             },
             "id": "DNK",
             "properties": {
-                "name": "Denmark"
+                "name": "Denmark",
+                "descrip": ["2014", "finding the Kronborg Castle by accident"]
             },
             "type": "Feature"
         },
@@ -15966,7 +15978,8 @@
             },
             "id": "DOM",
             "properties": {
-                "name": "Dominican Republic"
+                "name": "Dominican Republic",
+                "descrip": ["2016", "eating coconut slices on the beach"]
             },
             "type": "Feature"
         },
@@ -16900,7 +16913,8 @@
             },
             "id": "ESP",
             "properties": {
-                "name": "Spain"
+                "name": "Spain",
+                "descrip": ["2011", "La Sagrada Família"]
             },
             "type": "Feature"
         },
@@ -16982,7 +16996,8 @@
             },
             "id": "EST",
             "properties": {
-                "name": "Estonia"
+                "name": "Estonia",
+                "descrip": ["2011", "open air markets"]
             },
             "type": "Feature"
         },
@@ -17398,7 +17413,8 @@
             },
             "id": "FIN",
             "properties": {
-                "name": "Finland"
+                "name": "Finland",
+                "descrip": ["2016", "Sibelius Monument"]
             },
             "type": "Feature"
         },
@@ -17884,7 +17900,8 @@
             },
             "id": "FRA",
             "properties": {
-                "name": "France"
+                "name": "France",
+                "descrip": ["2011", "eating a berry kouign-amann"]
             },
             "type": "Feature"
         },
@@ -18266,7 +18283,8 @@
             },
             "id": "GBR",
             "properties": {
-                "name": "England"
+                "name": "England",
+                "descrip": ["2017", "shopping at hip stores in London"]
             },
             "type": "Feature"
         },
@@ -19230,7 +19248,8 @@
             },
             "id": "GRC",
             "properties": {
-                "name": "Greece"
+                "name": "Greece",
+                "descrip": ["2017", "riding a jetski around the southern islands"]
             },
             "type": "Feature"
         },
@@ -22382,7 +22401,8 @@
             },
             "id": "IND",
             "properties": {
-                "name": "India"
+                "name": "India",
+                "descrip": ["2016", "saw two live births & open heart surgery"]
             },
             "type": "Feature"
         },
@@ -22990,7 +23010,8 @@
             },
             "id": "ISL",
             "properties": {
-                "name": "Iceland"
+                "name": "Iceland",
+                "descrip": ["2017", "Seljalandsfoss waterfall & the Blue Lagoon"]
             },
             "type": "Feature"
         },
@@ -23096,7 +23117,8 @@
             },
             "id": "ISR",
             "properties": {
-                "name": "Israel"
+                "name": "Israel",
+                "descrip": ["2006", "going to a Jewish wedding for the first time"]
             },
             "type": "Feature"
         },
@@ -23468,7 +23490,8 @@
             },
             "id": "ITA",
             "properties": {
-                "name": "Italy"
+                "name": "Italy",
+                "descrip": ["2017", "the architecture, gelato & language"]
             },
             "type": "Feature"
         },
@@ -23900,7 +23923,8 @@
             },
             "id": "JPN",
             "properties": {
-                "name": "Japan"
+                "name": "Japan",
+                "descrip": ["2017", "Fushimi Inari"]
             },
             "type": "Feature"
         },
@@ -24524,7 +24548,8 @@
             },
             "id": "KEN",
             "properties": {
-                "name": "Kenya"
+                "name": "Kenya",
+                "descrip": ["2007", "seeing the Great Migration"]
             },
             "type": "Feature"
         },
@@ -24850,7 +24875,8 @@
             },
             "id": "KOR",
             "properties": {
-                "name": "South Korea"
+                "name": "South Korea",
+                "descrip": ["2017", "the views from Lotte Tower & shopping in Myeong-dong"]
             },
             "type": "Feature"
         },
@@ -26198,7 +26224,8 @@
             },
             "id": "MAR",
             "properties": {
-                "name": "Morocco"
+                "name": "Morocco",
+                "descrip": ["2014", "going rug shopping"]
             },
             "type": "Feature"
         },
@@ -29394,7 +29421,8 @@
             },
             "id": "NAM",
             "properties": {
-                "name": "Namibia"
+                "name": "Namibia",
+                "descrip": ["2013", "driving ATVs on the sand dunes"]
             },
             "type": "Feature"
         },
@@ -30244,7 +30272,8 @@
             },
             "id": "NLD",
             "properties": {
-                "name": "Netherlands"
+                "name": "Netherlands",
+                "descrip": ["2014", "the windmills"]
             },
             "type": "Feature"
         },
@@ -30624,7 +30653,8 @@
             },
             "id": "NOR",
             "properties": {
-                "name": "Norway"
+                "name": "Norway",
+                "descrip": ["2016", "biking alongside the fjords"]
             },
             "type": "Feature"
         },
@@ -31722,7 +31752,8 @@
             },
             "id": "PAN",
             "properties": {
-                "name": "Panama"
+                "name": "Panama",
+                "descrip": ["2006", "the canal"]
             },
             "type": "Feature"
         },
@@ -33116,7 +33147,8 @@
             },
             "id": "PRI",
             "properties": {
-                "name": "Puerto Rico"
+                "name": "Puerto Rico",
+                "descrip": ["2017", "watching soccer games in town squares"]
             },
             "type": "Feature"
         },
@@ -33448,7 +33480,8 @@
             },
             "id": "PRT",
             "properties": {
-                "name": "Portugal"
+                "name": "Portugal",
+                "descrip": ["2016", "exploring castles in Sintra"]
             },
             "type": "Feature"
         },
@@ -38953,7 +38986,8 @@
             },
             "id": "SWE",
             "properties": {
-                "name": "Sweden"
+                "name": "Sweden",
+                "descrip": ["2016", "stumbling across a fair downtown"]
             },
             "type": "Feature"
         },
@@ -40937,7 +40971,8 @@
             },
             "id": "TZA",
             "properties": {
-                "name": "United Republic of Tanzania"
+                "name": "United Republic of Tanzania",
+                "descrip": ["2007", "hot air balloon rides (before fainting)"]
             },
             "type": "Feature"
         },
@@ -43391,7 +43426,8 @@
             },
             "id": "USA",
             "properties": {
-                "name": "USA"
+                "name": "USA",
+                "descrip": ["2017", "the diversity"]
             },
             "type": "Feature"
         },
@@ -44893,7 +44929,8 @@
             },
             "id": "ZAF",
             "properties": {
-                "name": "South Africa"
+                "name": "South Africa",
+                "descrip": ["2013", "sunrise hike up Table Mountain"]
             },
             "type": "Feature"
         },

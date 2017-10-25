@@ -82,16 +82,23 @@
                      .on("mouseover", function(d) {      
                         div.transition()        
                             .duration(300)      
-                            .style("opacity", .9);      
-                        div .html("<b><font size='5'>" + d.properties.name + "</font></b>" + "</br>" + 
+                            .style("opacity", .9);
+
+                        var visited = d.properties.descrip; 
+
+                        if (visited !== undefined) {
+                          div.html("<b><font size='5'>" + d.properties.name + "</font></b>" + "</br>" + 
                                   "<b>" +"Most Recent Visit: " + "</b>" + d.properties.descrip[0] + "</br>" + 
                                   "<b>" +"Favorite Thing: " + "</b>" + d.properties.descrip[1]);  
+                        } else {
+                          div.html("<b><font size='4'>" + d.properties.name + "</font></b>");
+                        }
     
                         })
 
                      .on("mousemove", function(d){
                         div .style("left", (d3.event.pageX - 30) + "px")     
-                            .style("top", (d3.event.pageY - 40) + "px");  
+                            .style("top", (d3.event.pageY - 50) + "px");  
                         })
 
                      .on("mouseout", function(d) {       
