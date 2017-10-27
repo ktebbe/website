@@ -34,7 +34,7 @@
     }
 
     svg {
-      background: rgb(221, 236, 255);
+      background: rgb(224, 240, 255);
       border-radius: 500px;
       border:1px solid lightgrey;
     
@@ -65,24 +65,13 @@
                                 .scale(300)
                                 .translate([width / 2, height / 2])
                                 .clipAngle(90)
-                                .precision(.1);
+                                .precision(.9);
 
         var path = d3.geo.path().projection(projection);
 
         var div = d3.select("body").append("div")   
                     .attr("class", "tooltip")               
                     .style("opacity", 0);
-
-        var drag = d3.behavior.drag()
-                .origin(function() { return {x: rotate[0], y: -rotate[1]}; })
-                .on("drag", function() {
-                  rotate[0] = d3.event.x;
-                  rotate[1] = -d3.event.y;
-
-                  projection.rotate(rotate);
-                  path = d3.geo.path().projection(projection);
-                  d3.selectAll("path").attr("d", path);
-                });
 
         //adding dragging functionality
       var m0,
@@ -121,7 +110,7 @@
                         return "rgb(71, 71, 137)";
                         } else {
                         //If description field does not exist ... lighter color
-                        return "rgb(208, 208, 234)";
+                        return "rgb(203, 203, 214)"; //rgb(208, 208, 234)
                         }
                       })
 
@@ -155,37 +144,6 @@
                             .style("opacity", 0)
                       })
                      .call(drag);
-
-
-        //adding draggin functionality
-                     
-                // var drag = d3.behavior.drag()
-                //             .on("dragstart", function() {
-                //         // Adapted from http://mbostock.github.io/d3/talk/20111018/azimuthal.html and updated for d3 v3
-                //                 var proj = projection.rotate();
-                //                 m0 = [d3.event.sourceEvent.pageX, d3.event.sourceEvent.pageY];
-                //                 o0 = [-proj[0],-proj[1]];
-                //             })
-                //             .on("drag", function() {
-                //               if (m0) {
-                //                 var m1 = [d3.event.sourceEvent.pageX, d3.event.sourceEvent.pageY],
-                //                 o1 = [o0[0] + (m0[0] - m1[0]) / 4, o0[1] + (m1[1] - m0[1]) / 4];
-                //                 projection.rotate([-o1[0], -o1[1]]);
-                //               }
-
-            // Update the map
-          //   path = d3.geo.path().projection(projection);
-          //   d3.selectAll("path").attr("d", path);
-          // });
-
-          //var zoom = d3.behavior.zoom()
-                                //.on("zoom",function() {
-                                    //div.attr("transform","translate("+ 
-                                    //d3.event.translate.join(",")+")scale("+d3.event.scale+")");
-                                    //div.selectAll("path")  
-                                     //  .attr("d", path.projection(projection)); 
-
-                      //}; 
                         
 
       };
