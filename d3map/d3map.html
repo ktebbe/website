@@ -5,11 +5,13 @@
     Tooltips: http://www.d3noob.org/2013/01/adding-tooltips-to-d3js-graph.html
     Tooltip moving with mouse: https://bl.ocks.org/mbostock/1087001
     Reactive coloring: http://bl.ocks.org/michellechandra/0b2ce4923dc9b5809922
+    Draggin: http://bl.ocks.org/jczaplew/6457917
 -->
 <html>
 <head>
   <meta charset="utf-8">
   <script src="http://d3js.org/d3.v3.min.js"></script>
+  <script src="http://d3js.org/topojson.v1.min.js"></script>
 
     <style>
 
@@ -48,15 +50,54 @@
             .append('g')
             .attr('class', 'map');
 
-        var projection = d3.geo.mercator()
-                               .scale(120)
-                               .translate( [width / 2, height / 2]);
+        // var projection = d3.geo.mercator()
+        //                        .scale(120)
+        //                        .translate( [width / 2, height / 2]);
+
+        var projection = d3.geo.orthographic()
+                                .scale(300)
+                                .translate([width / 2, height / 2])
+                                .clipAngle(90)
+                                .precision(.1);
 
         var path = d3.geo.path().projection(projection);
 
         var div = d3.select("body").append("div")   
                     .attr("class", "tooltip")               
                     .style("opacity", 0);
+
+        var drag = d3.behavior.drag()
+                .origin(function() { return {x: rotate[0], y: -rotate[1]}; })
+                .on("drag", function() {
+                  rotate[0] = d3.event.x;
+                  rotate[1] = -d3.event.y;
+
+                  projection.rotate(rotate);
+                  path = d3.geo.path().projection(projection);
+                  d3.selectAll("path").attr("d", path);
+                });
+
+        //adding dragging functionality
+      var m0,
+          o0;
+                     
+      var drag = d3.behavior.drag()
+                  .on("dragstart", function() {
+                      var proj = projection.rotate();
+                      m0 = [d3.event.sourceEvent.pageX, d3.event.sourceEvent.pageY];
+                      o0 = [-proj[0],-proj[1]];
+                  })
+
+                  .on("drag", function() {
+                    if (m0) {
+                      var m1 = [d3.event.sourceEvent.pageX, d3.event.sourceEvent.pageY],
+                      o1 = [o0[0] + (m0[0] - m1[0]) / 4, o0[1] + (m1[1] - m0[1]) / 4];
+                      projection.rotate([-o1[0], -o1[1]]);
+                    }
+                    //Updating the map
+                    path = d3.geo.path().projection(projection);
+                    d3.selectAll("path").attr("d", path);
+                   });
 
         var map = svg.selectAll('path')
                      .data(geo_data.features)
@@ -104,8 +145,41 @@
                      .on("mouseout", function(d) {       
                         div.transition()        
                             .duration(300)      
-                            .style("opacity", 0);   
-                        });
+                            .style("opacity", 0)
+                      })
+                     .call(drag);
+
+
+        //adding draggin functionality
+                     
+                // var drag = d3.behavior.drag()
+                //             .on("dragstart", function() {
+                //         // Adapted from http://mbostock.github.io/d3/talk/20111018/azimuthal.html and updated for d3 v3
+                //                 var proj = projection.rotate();
+                //                 m0 = [d3.event.sourceEvent.pageX, d3.event.sourceEvent.pageY];
+                //                 o0 = [-proj[0],-proj[1]];
+                //             })
+                //             .on("drag", function() {
+                //               if (m0) {
+                //                 var m1 = [d3.event.sourceEvent.pageX, d3.event.sourceEvent.pageY],
+                //                 o1 = [o0[0] + (m0[0] - m1[0]) / 4, o0[1] + (m1[1] - m0[1]) / 4];
+                //                 projection.rotate([-o1[0], -o1[1]]);
+                //               }
+
+            // Update the map
+          //   path = d3.geo.path().projection(projection);
+          //   d3.selectAll("path").attr("d", path);
+          // });
+
+          //var zoom = d3.behavior.zoom()
+                                //.on("zoom",function() {
+                                    //div.attr("transform","translate("+ 
+                                    //d3.event.translate.join(",")+")scale("+d3.event.scale+")");
+                                    //div.selectAll("path")  
+                                     //  .attr("d", path.projection(projection)); 
+
+                      //}; 
+                        
 
       };
       </script>
