@@ -33,14 +33,21 @@
       pointer-events: none;         
     }
 
+    svg {
+      background: rgb(221, 236, 255);
+      border-radius: 500px;
+      border:1px solid lightgrey;
+    
+    }
+
 
     </style>
 
     <script type="text/javascript">  
       function draw(geo_data) {
         "use strict";
-        var margin = 75,
-            width = 1400 - margin,
+        var margin = 0,
+            width = 600 - margin,
             height = 600 - margin;
 
         var svg = d3.select("body")
