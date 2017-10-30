@@ -27253,7 +27253,8 @@
             },
             "id": "MEX",
             "properties": {
-                "name": "Mexico"
+                "name": "Mexico",
+                "descrip": ["2005", "painting ceramics"]
             },
             "type": "Feature"
         },
