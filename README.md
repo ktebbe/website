@@ -5,6 +5,8 @@ Welcome!
 
 This is my personal site, showing various projects, travels, photos, and contact information. The initial template was taken from Helios by HTML5 UP, with some other attributes incorporated from Forty by HTML5 UP.
 
+See the deployed beta version [here](kiras-website.herokuapp.com).
+
 
 ## Credits:
 
