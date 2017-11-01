@@ -5,7 +5,7 @@ Welcome!
 
 This is my personal site, showing various projects, travels, photos, and contact information. The initial template was taken from Helios by HTML5 UP, with some other attributes incorporated from Forty by HTML5 UP.
 
-See the deployed beta version [here](kiras-website.herokuapp.com).
+See the deployed beta version [here](https://kiras-website.herokuapp.com).
 
 
 ## Credits:
@@ -21,12 +21,12 @@ See the deployed beta version [here](kiras-website.herokuapp.com).
 * [Google Maps API](https://developers.google.com/maps/documentation)
 
 ### Other (from HTML5 UP):
-* [jQuery](jquery.com)
+* [jQuery](https://jquery.com)
 * html5shiv.js (@afarkas @jdalton @jon_neal @rem)
-* [CSS3 Pie](css3pie.com)
-* [background-size polyfill](github.com/louisremi)
-* [Respond.js](j.mp/respondjs)
+* [CSS3 Pie](https://css3pie.com)
+* [background-size polyfill](https://github.com/louisremi)
+* [Respond.js](https://j.mp/respondjs)
 * jquery.dropotron (@ajlkn)
 * jquery.scrolly (@ajlkn)
 * jquery.onvisible (@ajlkn)
-* [Skel](skel.io)
+* [Skel](https://skel.io)
