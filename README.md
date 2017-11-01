@@ -23,10 +23,10 @@ See the deployed beta version [here](https://kiras-website.herokuapp.com).
 ### Other (from HTML5 UP):
 * [jQuery](https://jquery.com)
 * html5shiv.js (@afarkas @jdalton @jon_neal @rem)
-* [CSS3 Pie](https://css3pie.com)
+* [CSS3 Pie](http://css3pie.com)
 * [background-size polyfill](https://github.com/louisremi)
 * [Respond.js](https://j.mp/respondjs)
 * jquery.dropotron (@ajlkn)
 * jquery.scrolly (@ajlkn)
 * jquery.onvisible (@ajlkn)
-* [Skel](https://skel.io)
+* [Skel](http://skel.io)
