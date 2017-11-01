@@ -359,60 +359,83 @@
 							        '</div>';
 
 							        // making infoWindows & adding click functionality
+
+									
+
 							        var newhavenInfo = new google.maps.InfoWindow({
 							        	content: newhavenContent
 							        });
+
+							        //keep track of current open window so can close when new window opened
+									var currentWindow = newhavenInfo;
+
 							        newhaven.addListener('click', function() {
+							        	currentWindow.close();
 							        	newhavenInfo.open(map, newhaven);
+							        	currentWindow = newhavenInfo;
 							        });
 
 							        var elmhurstInfo = new google.maps.InfoWindow({
 							        	content: elmhurstContent
 							        });
 							        elmhurst.addListener('click', function() {
+							        	currentWindow.close();
 							        	elmhurstInfo.open(map, elmhurst);
+							        	currentWindow = elmhurstInfo;
 							        });
 
 							        var chinaInfo = new google.maps.InfoWindow({
 							        	content: chinaContent
 							        });
 							        china.addListener('click', function() {
+							        	currentWindow.close();
 							        	chinaInfo.open(map, china);
+							        	currentWindow = chinaInfo;
 							        });
 							        
 							        var gradoInfo = new google.maps.InfoWindow({
 							        	content: gradoContent
 							        });
 							        grado.addListener('click', function() {
+							        	currentWindow.close();
 							        	gradoInfo.open(map, grado);
+							        	currentWindow = gradoInfo;
 							        });
 
 							        var shipInfo = new google.maps.InfoWindow({
 							        	content: shipContent
 							        });
 							        ship.addListener('click', function() {
+							        	currentWindow.close();
 							        	shipInfo.open(map, ship);
+							        	currentWindow = shipInfo;
 							        });
 
 							        var cumbreInfo = new google.maps.InfoWindow({
 							        	content: cumbreContent
 							        });
 							        cumbre.addListener('click', function() {
+							        	currentWindow.close();
 							        	cumbreInfo.open(map, cumbre);
+							        	currentWindow = cumbreInfo;
 							        });
 
 							        var salamancaInfo = new google.maps.InfoWindow({
 							        	content: salamancaContent
 							        });
 							        salamanca.addListener('click', function() {
+							        	currentWindow.close();
 							        	salamancaInfo.open(map, salamanca);
+							        	currentWindow = salamancaInfo;
 							        });
 
 							        var resistenciaInfo = new google.maps.InfoWindow({
 							        	content: resistenciaContent
 							        });
 							        resistencia.addListener('click', function() {
+							        	currentWindow.close();
 							        	resistenciaInfo.open(map, resistencia);
+							        	currentWindow = resistenciaInfo;
 							        });
 
 
