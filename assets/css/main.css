@@ -2129,6 +2129,7 @@
 			overflow: hidden;
 			position: relative;
 			width: 40%;
+			margin-bottom: 0;
 		}
 
 			.tiles article .image {
@@ -2233,7 +2234,7 @@
 			.tiles article:nth-child(8n - 1):before {
 				background-color: #f3c1ff;
 			}
-			
+
 			.tiles article:nth-child(8n):before {
 				background-color: #cdb7ff;
 			}
