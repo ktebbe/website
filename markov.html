@@ -1,0 +1,130 @@
+<!DOCTYPE HTML>
+<!--
+	This page describes my undergraduate AMTH thesis & links to my github & PDF download. 
+-->
+<html>
+	<head>
+		<title>KT | Markov Generator</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<script src="https://code.jquery.com/jquery-1.10.2.js"></script> 
+	</head>
+	<body class="left-sidebar">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<div id="header">
+
+					<!-- Inner -->
+						<div class="inner">
+							<header>
+								<h1><a href="index.html" id="logo">Markov Model Quote Generator</a></h1>
+							</header>
+						</div>
+
+						<!-- Nav -->
+						<nav id="nav">
+							<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+							<script>
+							$(function(){
+							  $("#nav").load("nav.html");
+							});
+							</script> 
+						</nav>
+
+				</div>
+
+			<!-- Main -->
+				<div class="wrapper style1">
+
+					<div class="container">
+						<div class="row 200%">
+							<div class="4u 12u(mobile)" id="sidebar">
+								<hr class="first" />
+								<section>
+									<header>
+										<h3><a href="#">Want to see more?</a></h3>
+									</header>
+									<footer>
+										<a href="https://github.com/ktebbe/markov" class="button">Go to Github</a>
+										<p> </p>
+										<a href="http://ktebbe.shinyapps.io/CourseRec" class="button">Go to Generator</a>
+									</footer>
+								</section>
+								<hr />
+								
+							</div>
+							<div class="8u 12u(mobile) important(mobile)" id="content">
+								<article id="main">
+									<header>
+										<h2>A Markov Model Quote Generator for <i>Avatar: The Last Airbender</i></h2>
+									</header>
+									<section>
+										<header>
+											<h3>Summary</h3>
+										</header>
+										<p>
+											For my senior project in Applied Mathematics from Yale College, I created a content-based recommendation system of the Spring 2017 Yale course offerings. After gathering and cleaning the data, I used the Jaccard index to construct similarity scores between all pairs of courses. A threshold was selected to create a network among the courses. That network, along with two other variations, was deployed for exploration on a Shiny application. Users played a game (similar to Wikispeedia) where they were given a starting course and had to navigate along the network in an attempt to reach a given target class. Data collected from gameplay was used to analyze the navigability of the three networks and ultimately create a recommendation system.
+										</p>
+									</section>
+									<a class="image featured"><img src="images/amth.jpg" alt="" /></a>
+									<section>
+										<header>
+											<h3>Motivation</h3>
+										</header>
+										<p>
+											Yale students have flexibility in choosing their academic coursework: at the beginning of each semester, students have two weeks to sit-in various classes without commitment, calling “shopping,” before submitting their schedule. Students often have a few classes preselected that are required for either their major or distributional requirements. However, there are many options for the other classes students take in a semester, given that there are over 1,000 Yale courses and most take four or five. The process of selecting which courses you will attend during these first two weeks is called “blue booking,” referencing the original blue course offering books that students would leaf through before the semester began.
+										</p>
+										<p>
+											The methods that Yale students employ when blue booking varies by person. Some use online databases to sort all classes by difficulty and ranking, some take courses that are prerequisites for future classes they would like to take, some search through some department’s entire offerings. I sought to offer a novel way of searching for courses by creating a recommendation system based on course topics for the spring 2017 course offerings. The recommendation system, which will be described in length in the rest of the report, connects courses deemed similar by the keywords present in their descriptions. Students using the recommendation system start from a course they know they like and the recommendation system suggests similar courses.
+										</p>
+									</section>
+									<section>
+										<header>
+											<h3>Skills I Used</h3>
+										</header>
+										<p>
+											<ul style="list-style-type:disc">
+												<li>Network Analysis (via R)</li>
+												<li>Recommender Systems (Machine Learning)</li>
+												<li>Data Cleaning (via R)</li>
+												<li>Software Development (via Shiny)</li>
+												<li>Databases (via SQL & AWS)</li>
+												<li>Working with Large Data Sets</li>
+											</ul> 
+										</p>
+									</section>
+								</article>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+			<!-- Footer -->
+			<div id="footer">
+				<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+				<script> 
+				$(function(){
+				  $("#footer").load("footer.html"); 
+				});
+				</script> 
+			</div>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.onvisible.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
