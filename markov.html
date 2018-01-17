@@ -51,7 +51,7 @@
 									<footer>
 										<a href="https://github.com/ktebbe/markov" class="button">Go to Github</a>
 										<p> </p>
-										<a href="http://ktebbe.shinyapps.io/CourseRec" class="button">Go to Generator</a>
+										<a href="https://kiratebbe.shinyapps.io/markov/" class="button">Go to Generator</a>
 									</footer>
 								</section>
 								<hr />
@@ -67,19 +67,23 @@
 											<h3>Summary</h3>
 										</header>
 										<p>
-											For my senior project in Applied Mathematics from Yale College, I created a content-based recommendation system of the Spring 2017 Yale course offerings. After gathering and cleaning the data, I used the Jaccard index to construct similarity scores between all pairs of courses. A threshold was selected to create a network among the courses. That network, along with two other variations, was deployed for exploration on a Shiny application. Users played a game (similar to Wikispeedia) where they were given a starting course and had to navigate along the network in an attempt to reach a given target class. Data collected from gameplay was used to analyze the navigability of the three networks and ultimately create a recommendation system.
-										</p>
-									</section>
-									<a class="image featured"><img src="images/amth.jpg" alt="" /></a>
-									<section>
-										<header>
-											<h3>Motivation</h3>
-										</header>
-										<p>
-											Yale students have flexibility in choosing their academic coursework: at the beginning of each semester, students have two weeks to sit-in various classes without commitment, calling “shopping,” before submitting their schedule. Students often have a few classes preselected that are required for either their major or distributional requirements. However, there are many options for the other classes students take in a semester, given that there are over 1,000 Yale courses and most take four or five. The process of selecting which courses you will attend during these first two weeks is called “blue booking,” referencing the original blue course offering books that students would leaf through before the semester began.
+											This Shiny application uses a trigram Markov model to generate or complete lines of dialogue for six major characters from the Nickelodeon show Avatar: The Last Airbender.
 										</p>
 										<p>
-											The methods that Yale students employ when blue booking varies by person. Some use online databases to sort all classes by difficulty and ranking, some take courses that are prerequisites for future classes they would like to take, some search through some department’s entire offerings. I sought to offer a novel way of searching for courses by creating a recommendation system based on course topics for the spring 2017 course offerings. The recommendation system, which will be described in length in the rest of the report, connects courses deemed similar by the keywords present in their descriptions. Students using the recommendation system start from a course they know they like and the recommendation system suggests similar courses.
+
+											After scraping all lines of dialogue from episode transcripts on Avatar Spirit, I cleaned the data to be separated by speaker and quote. I kept just the top characters, according to their liens of dialogue: Aang, Sokka, Katara, Zuko, Toph, and Iroh. 
+										</p>
+										<p>
+											Once that was done, I created trigram Markov models for each character, counting the number of times that each triple of words (e.g. "I", "am", "cool") appeared in all of that character's quotes. I treated all punctuation (except apostrophes) as separate tokens, so the generated sentences would have as natural use of punctuation as possible.
+										</p>
+										<p>
+											After I made the data tables storing the frequency of each trigram for each character, I made the quote generator - finally! The generator works on two, one, or zero input words. (If the user enters more than two words, it just strips the inout down to the last two.) It filters the trigram table down to instances that match the input words (e.g. inputWord="I have" -> "I have no"(15), "I have a" (10), etc.) and then uses the frequency to draw a weighted sample. I set a cap on the length of the generated quote so it wouldn't get stuck in an infinite loop.
+										</p>
+										<p>
+											Finally, so the generated quotes looked as real as possible, I created a 'reformat' function that implements natural English capitalization, such as the first word in a sentence, the word after sentence-ending punctuation (e.g. . ? !), and words involving "I" (e.g. I, I'm, I'll, I'd, I've).
+										</p>
+										<p>
+
 										</p>
 									</section>
 									<section>
@@ -88,11 +92,9 @@
 										</header>
 										<p>
 											<ul style="list-style-type:disc">
-												<li>Network Analysis (via R)</li>
-												<li>Recommender Systems (Machine Learning)</li>
-												<li>Data Cleaning (via R)</li>
+												<li>Machine Learning (via R)</li>
+												<li>Website Scraping</li>
 												<li>Software Development (via Shiny)</li>
-												<li>Databases (via SQL & AWS)</li>
 												<li>Working with Large Data Sets</li>
 											</ul> 
 										</p>
