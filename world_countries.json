@@ -27254,7 +27254,7 @@
             "id": "MEX",
             "properties": {
                 "name": "Mexico",
-                "descrip": ["2005", "painting ceramics"]
+                "descrip": ["2017", "freediving in cenotes"]
             },
             "type": "Feature"
         },
@@ -43430,7 +43430,7 @@
             "id": "USA",
             "properties": {
                 "name": "USA",
-                "descrip": ["2017", "the diversity"]
+                "descrip": ["2017", "the geographic & cultural diversity"]
             },
             "type": "Feature"
         },
