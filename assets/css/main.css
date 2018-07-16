@@ -2883,6 +2883,19 @@
     display: inline-block;
 }
 
+/* Line for Game Review */
+.reviewline{
+		position: relative;
+		display: block;
+		border: 0;
+		top: 4.5em;
+		margin-bottom: 9em;
+		height: 6px;
+		border-top: solid 1px rgba(128, 128, 128, 0.2);
+		border-bottom: solid 1px rgba(128, 128, 128, 0.2);
+    }
+
+
 /* Wide */
 
 	@media screen and (max-width: 1680px) {
