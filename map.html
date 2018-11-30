@@ -225,6 +225,14 @@
 							        	animation: google.maps.Animation.DROP
 							        });
 
+							        var cambridge = new google.maps.Marker({
+							        	position: {lat: 41.310050, lng: -72.932111},  
+							        	map: map,
+							        	title: 'Cambridge, MA',
+							        	icon : 'images/marker2.png',
+							        	animation: google.maps.Animation.DROP
+							        });
+
 							        var grado = new google.maps.Marker({
 							        	position: {lat: 45.680393, lng: 13.378309},  
 							        	map: map,
@@ -283,6 +291,17 @@
 							        '<p> I got my BA in Applied Mathematics & Sociology from Yale University in New Haven, CT. After four wonderful years as a member of Pierson College, I graduated in May 2017. </p>'+
 							        '<p>While at Yale, I did many new things, such as competing in intercollegiate gymnastics, being a tap dancer, learning traditional letter press techniques, operating a spotlight for a dramatic production, designing the lighting for various dance shows, soliciting feedback on the local board of alders’ legislative agenda by going door-to-door, and writing two senior theses on very different topics. </p>'+
 							        '<p>Being at Yale was very different than living in Elmhurst and I learned a lot about race (Elmhurst is ~90% white), feminism, and urban studies. And I learned how to code in a language other than Java, so that was good, too. </p>'+
+							        '</div>'+
+							        '</div>';
+
+							        var cambridgeContent = '<div id="content">'+
+							        '<div id="siteNotice">'+
+							        '</div>'+
+							        '<h1 id="firstHeading" class="firstHeading">Cambridge, MA | September 2017 – present</h1>'+
+							        '<div id="bodyContent">'+
+							        '<p> Here I am! I initially moved to Cambridge for a job with IBM – guess which one I liked more? </p>'+
+							        '<p> Cambridge is a great place to live – there’s a never ending stream of things to do and places to visit, but still small enough that you can carve out a piece and call it your own. All of the universities give you guest speakers, conferences, and performances. I love the MBTA, despite all of the complaints that are inevitable of any public transit system. There are a surprisingly high number of neighborhoods to visit, which are easy to get to since the Boston area is mind-boggling small. One time, I WALKED from my office to an NBA stadium in 10 minutes. A single bus line, that’s two miles end-to-end, gets me to my office, my doctor’s office, the public library, a post office, and a painting class. </p>'+
+							        '<p> As with any endeavor or location or job, the people really make a place special. I’m very lucky to live in a place filled with people that make me happy: ones that I knew before and ones that I got to know once I was here. </p>'+
 							        '</div>'+
 							        '</div>';
 
@@ -360,19 +379,27 @@
 
 							        // making infoWindows & adding click functionality
 
+									//keep track of current open window so can close when new window opened
+									var currentWindow = cambridgeInfo;
 									
 
 							        var newhavenInfo = new google.maps.InfoWindow({
 							        	content: newhavenContent
 							        });
-
-							        //keep track of current open window so can close when new window opened
-									var currentWindow = newhavenInfo;
-
 							        newhaven.addListener('click', function() {
 							        	currentWindow.close();
 							        	newhavenInfo.open(map, newhaven);
 							        	currentWindow = newhavenInfo;
+							        });
+
+
+       								var cambridgeInfo = new google.maps.InfoWindow({
+							        	content: cambridgeContent
+							        });
+							        cambridge.addListener('click', function() {
+							        	currentWindow.close();
+							        	cambridgeInfo.open(map, cambridge);
+							        	currentWindow = cambridgeInfo;
 							        });
 
 							        var elmhurstInfo = new google.maps.InfoWindow({
