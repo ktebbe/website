@@ -378,9 +378,6 @@
 							        '</div>';
 
 							        // making infoWindows & adding click functionality
-
-									//keep track of current open window so can close when new window opened
-									var currentWindow = cambridgeInfo;
 									
 
 							        var newhavenInfo = new google.maps.InfoWindow({
@@ -401,6 +398,10 @@
 							        	cambridgeInfo.open(map, cambridge);
 							        	currentWindow = cambridgeInfo;
 							        });
+
+							        //keep track of current open window so can close when new window opened
+									var currentWindow = cambridgeInfo;
+									///////////////////////////////////
 
 							        var elmhurstInfo = new google.maps.InfoWindow({
 							        	content: elmhurstContent
